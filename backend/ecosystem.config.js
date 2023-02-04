@@ -21,7 +21,7 @@ module.exports = {
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
       'pre-deploy': `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'cd source/backend && npm i && npm run build',
+      'post-deploy': 'cd current/backend && npm i && npm run build',
     },
   },
 }; 
