@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 dotenv.config({ path: '.env.deploy' });
 
 const {
-  DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF = 'origin/master', DEPLOY_REPO
+  DEPLOY_KEY, DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF = 'origin/master', DEPLOY_REPO
 } = process.env;
 
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
   // Настройка деплоя
   deploy: {
     production: {
+      key: DEPLOY_KEY,
       user: DEPLOY_USER,
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
