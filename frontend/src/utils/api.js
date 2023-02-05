@@ -139,7 +139,7 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('http://app.mestoproject.students.nomoredomainsclub.ru');
+  const api = new Api('https://app.mestoproject.students.nomoredomainsclub.ru');
   
   export default api;
   
